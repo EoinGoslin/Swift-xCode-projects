@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloPoly3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eft-hy-wW6">
+                                <rect key="frame" x="58.5" y="36" width="258" height="75.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6o-z8-XP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberOfSides: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NI-AP-Vd1">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdm-Jh-VHm" userLabel="VertexLabelCount">
+                                                <rect key="frame" x="139.5" y="0.0" width="10.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="134" translatesAutoresizingMaskIntoConstraints="NO" id="znX-1C-wap">
+                                        <rect key="frame" x="0.0" y="45.5" width="258" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf0-iC-rhC">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                                <state key="normal" title="Decrease"/>
+                                                <connections>
+                                                    <action selector="decreaseNumberOfSides:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ke-AQ-L2H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zo0-jw-rqk">
+                                                <rect key="frame" x="199" y="0.0" width="59" height="30"/>
+                                                <state key="normal" title="Increase"/>
+                                                <connections>
+                                                    <action selector="increaseNumberOfSides:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kB2-6b-jKN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="znX-1C-wap" firstAttribute="width" secondItem="eft-hy-wW6" secondAttribute="width" id="i3E-Nf-Gon"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dri-CU-0aE" customClass="PolygonView" customModule="HelloPoly3" customModuleProvider="target">
+                                <rect key="frame" x="-27" y="174" width="429" height="389"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="429" id="N41-b9-yBV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="eft-hy-wW6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="WV2-k6-wjd"/>
+                            <constraint firstItem="dri-CU-0aE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="gzV-vB-RPH"/>
+                            <constraint firstItem="eft-hy-wW6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jJg-Kt-gP6"/>
+                            <constraint firstItem="dri-CU-0aE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rSu-4p-oSO"/>
+                            <constraint firstItem="dri-CU-0aE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="35" id="tpg-3n-I0X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BZ9-b9-Etg" appends="YES" id="bfB-wd-3Ge"/>
+                            <outletCollection property="gestureRecognizers" destination="Gf4-SJ-ir4" appends="YES" id="MVp-ep-T9J"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="PolygonView" destination="dri-CU-0aE" id="zUc-yZ-hI4"/>
+                        <outlet property="VertexLabelCount" destination="wdm-Jh-VHm" id="KeY-qt-zTD"/>
+                        <outlet property="decreaseButton" destination="rf0-iC-rhC" id="huC-iS-KYf"/>
+                        <outlet property="increaseButton" destination="zo0-jw-rqk" id="M4z-0i-YSf"/>
+                        <outlet property="polygonView" destination="dri-CU-0aE" id="OqE-wg-fwa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="BZ9-b9-Etg" userLabel="Swipe Gesture Recognizer right">
+                    <connections>
+                        <action selector="rightSwipe:" destination="BYZ-38-t0r" id="NYg-XL-AlR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Gf4-SJ-ir4" userLabel="Swipe Gesture Recognizer left">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="otK-wy-jSZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="67.916041979010501" y="26.399999999999999"/>
+        </scene>
+    </scenes>
+</document>
